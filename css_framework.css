@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'montserrat', 'sans serif';
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    padding: 35px 0;
+    color: white;
+    font-size: 1.5em;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0 350px;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.titel {
+    font-weight: 400;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.untertitel {
+    font-weight: 300;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#div1 {
+    width: 400px;
+    height: 140px;
+    margin: 10px 750px 10px 750px;
+    padding: 40px;
+    border: 1px solid black;
+}
+
+#div2 {
+    width: 400px;
+    height: 140px;
+    margin: 10px 750px 200px 750px;
+    padding: 40px;
+    border: 1px solid black;
+}
+
+.drag {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+
+.collapsible {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgb(255, 182, 193);
+    transition: 0.2 ease-in-out;
+    margin: 20px 900px 40px 900px;
+}
+
+.collapsible:hover {
+    background-color: rgb(212, 116, 121);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.025);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 20px 755px 200px 755px;
+}
+
+.normal {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgb(255, 182, 193);
+    transition: 0.2 ease-in-out;
+    margin: 20px 900px 200px 900px;
+}
+
+.normal:hover {
+    background-color: rgb(212, 116, 121);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.025);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+    width: 53vw;
+    margin-left: 420px;
+    margin-bottom: 200px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: black;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: white;
+    font-size: 1em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    margin-top: 30px;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+footer {
+    background-color: black;
+    padding: 35px 0;
+    color: white;
+    font-size: 1.5em;
+    flex-direction: row;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    padding: 0 350px;
+    justify-content: space-between;
+}

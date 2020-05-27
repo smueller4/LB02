@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LB02 Seraina Müller</title>
+    <link rel="stylesheet" href="multimedia_elemente.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="css_framework.html">
+                    <li>CSS Framework</li>
+                </a>
+                <a href="multimedia_elemente.html">
+                    <li>Multimedia Elemente</li>
+                </a>
+                <a href="qualitaetssicherung.html">
+                    <li>Qualitätssicherung</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                <img src="bilder/auge.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                <img src="bilder/astronaut.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                <img src="bilder/cat.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="bilder/bird.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="bilder/flowers.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="bilder/auge.jpg" width="203px" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="bilder/astronaut.jpg" width="203px" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="bilder/cat.jpg" width="203px" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="bilder/bird.jpg" width="203px" onclick="currentSlide(4)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="bilder/flowers.jpg" width="203px" onclick="currentSlide(5)">
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+        <video width="1015px" controls>
+            <source src="street.mp4" type="video/mp4">
+        </video>
+
+
+        <audio controls>
+            <source src="music.mp3" type="audio/mp3">
+        </audio>
+
+
+    </main>
+    <footer>
+        <ul>
+            <li>Seraina Müller</li>
+            <li>BM19c</li>
+            <li>LB02</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
